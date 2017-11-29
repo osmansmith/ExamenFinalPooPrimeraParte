@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Pasajero
+comment0.text=\r\n\ Clase\ Pasajero\ es\ la\ persona\ que\ compra\ un\ pasaje\ de\ vuelo.\r\n\ \r\n\ @author\ (Osman\ Ahumada)\ \r\n\ @version\ (1.0)\r\n
+comment1.params=
+comment1.target=Pasajero()
+comment10.params=obj\ obj2
+comment10.target=boolean\ equals(java.lang.Object,\ java.lang.Object)
+comment2.params=rut
+comment2.target=Pasajero(java.lang.String)
+comment3.params=rut\ nombre\ apellido\ edad\ pasaje
+comment3.target=Pasajero(java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ Pasaje)
+comment4.params=pass
+comment4.target=void\ setPasaje(Pasaje)
+comment5.params=
+comment5.target=Pasaje\ getPasaje()
+comment6.params=
+comment6.target=java.lang.String\ toString()
+comment6.text=\r\n\ Metodos\ de\ utilidad\ \r\n
+comment7.params=rut
+comment7.target=java.lang.String\ toString(java.lang.String)
+comment8.params=palabra
+comment8.target=void\ imprimir(java.lang.String)
+comment9.params=obj
+comment9.target=boolean\ equals(java.lang.Object)
+numComments=11

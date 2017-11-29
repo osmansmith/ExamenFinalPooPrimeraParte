@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Piloto
+comment0.text=\r\n\ Clase\ Piloto,\ Es\ el\ personal\ de\ cabina\ encargado\ de\ pilotear\ el\ avi\u00F3n.\r\n\ \r\n\ @author\ (Osman\ Ahumada\ Villafa\u00F1a)\ \r\n\ @version\ (1.0)\r\n
+comment1.params=
+comment1.target=Piloto()
+comment10.params=obj
+comment10.target=boolean\ equals(java.lang.Object)
+comment11.params=obj\ obj2
+comment11.target=boolean\ equals(java.lang.Object,\ java.lang.Object)
+comment2.params=rut
+comment2.target=Piloto(java.lang.String)
+comment3.params=rut\ nombre\ apellido\ edad\ horasVuelo
+comment3.target=Piloto(java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ int)
+comment4.params=hora
+comment4.target=void\ setHorasVuelo(int)
+comment5.params=
+comment5.target=int\ getHorasVuelo()
+comment6.params=hora
+comment6.target=boolean\ validaHora(int)
+comment7.params=
+comment7.target=java.lang.String\ toString()
+comment7.text=\r\n\ Metodos\ de\ utilidad\ \r\n
+comment8.params=rut
+comment8.target=java.lang.String\ toString(java.lang.String)
+comment9.params=palabra
+comment9.target=void\ imprimir(java.lang.String)
+numComments=12
