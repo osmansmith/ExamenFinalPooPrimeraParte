@@ -23,5 +23,5 @@ comment7.text=\r\n\ Metodos\ de\ utilidad\ \r\n
 comment8.params=rut
 comment8.target=java.lang.String\ toString(java.lang.String)
 comment9.params=palabra
-comment9.target=void\ imprimir(java.lang.String)
+comment9.target=void\ print(java.lang.String)
 numComments=12

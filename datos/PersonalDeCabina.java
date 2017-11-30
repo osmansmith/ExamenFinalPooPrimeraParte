@@ -23,7 +23,7 @@ public abstract class PersonalDeCabina extends Persona
         super(rut,nombre,apellido,edad);
     }
 
-    public void setNaciondalidad(String nac)
+    public void setNacionalidad(String nac)
     {
         this.nacionalidad = nac;
     }
@@ -33,48 +33,7 @@ public abstract class PersonalDeCabina extends Persona
         return(this.nacionalidad);
     }
     
-    public boolean validaRut(String val)
-    {
-        boolean flag = false;
-        try
-        {                        
-            if(val.length() > 0 && val.length() < 14)
-            {
-                this.setRut(val);
-                flag = true;
-            }else{
-                flag = false;
-            }
-        }
-        catch(Exception ex)
-        {
-            System.out.print("Error al validar el Rut : "+ex);
-        }
-        finally{
-         return(flag);
-        }    
-    }
-    public boolean validaEdad(int edad)
-    {
-        boolean flag = false;
-        try
-        {                        
-            if(edad > 0 && edad < 22)
-            {
-                this.setEdad(edad);
-                flag = true;
-            }else{
-                flag = false;
-            }
-        }
-        catch(Exception ex)
-        {
-            System.out.print("Error al validar la edad : "+ex);
-        }
-        finally{
-         return(flag);
-        }    
-    }
+   
    /**
      * Metodos de utilidad 
      */
@@ -90,7 +49,7 @@ public abstract class PersonalDeCabina extends Persona
     public boolean equals (Object obj) {
         if (obj instanceof Persona) 
         {
-            Persona personita = (Persona) obj;
+            PersonalDeCabina personita = (PersonalDeCabina) obj;
             if (super.equals(personita)) 
             {
                 return true; 
@@ -106,10 +65,10 @@ public abstract class PersonalDeCabina extends Persona
         }
     }
     public boolean equals (Object obj, Object obj2) {
-        if (obj instanceof Persona && obj2 instanceof Persona) 
+        if (obj instanceof PersonalDeCabina && obj2 instanceof PersonalDeCabina) 
         {
-            Persona personita = (Persona) obj;
-            Persona personota = (Persona) obj2;
+            PersonalDeCabina personita = (PersonalDeCabina) obj;
+            PersonalDeCabina personota = (PersonalDeCabina) obj2;
             if (personota.equals(personita)) 
             {
                 return true; 

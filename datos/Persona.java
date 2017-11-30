@@ -14,7 +14,7 @@ public abstract class Persona
     protected String rut;
     protected String nombre;
     protected String apellido;
-    protected int edad;
+    protected int edad = 0;
     
     /**
      * Constructores sobrecargados
@@ -70,6 +70,53 @@ public abstract class Persona
     public int getEdad()
     {
         return(this.edad);
+    }
+    
+    /**
+     * Validaciones
+     */
+    
+     public boolean validaRut(String val)
+    {
+        boolean flag = false;
+        try
+        {                        
+            if(val.length() > 0 && val.length() < 14)
+            {
+                this.setRut(val);
+                flag = true;
+            }else{
+                flag = false;
+            }
+        }
+        catch(Exception ex)
+        {
+            System.out.print("Error al validar el Rut : "+ex);
+        }
+        finally{
+         return(flag);
+        }    
+    }
+    public boolean validaEdad(int edad)
+    {
+        boolean flag = false;
+        try
+        {                        
+            if(edad >= 21)
+            {
+                this.setEdad(edad);
+                flag = true;
+            }else{
+                flag = false;
+            }
+        }
+        catch(Exception ex)
+        {
+            System.out.print("Error al validar la edad : "+ex);
+        }
+        finally{
+         return(flag);
+        }    
     }
     /**
      * Metodos de utilidad 

@@ -13,7 +13,7 @@ public class Azafate extends PersonalDeCabina
     /**
      * atributos
      */
-    private String idioma;
+    private String idioma = "Inglés";
     
     /**
      * constructores
@@ -35,7 +35,7 @@ public class Azafate extends PersonalDeCabina
     /**
      * Setters
      */
-    public void setIdioma()
+    public void setIdioma(String idioma)
     {
         this.idioma = idioma;
     }
@@ -62,22 +62,30 @@ public class Azafate extends PersonalDeCabina
     
     public String toString()
     {
-     return("");
+     String msj = "\n\n***  Datos de Azafate ***\n\n"+
+            "Rut : "+this.getRut()+
+            "\nNombre : "+this.getNombre()+
+            "\nApellido : "+this.getApellido()+
+            "\nEdad : "+this.getEdad()+
+            "\nNacionalidad : "+this.getNacionalidad()+
+            "\nIdiomas : "+this.getIdioma()+
+            "\n\n***************\n\n";
+         return(msj);
     }
     public String toString(String rut)
     {
-     return(""+rut);
+     return("El Rut es : "+this.getRut());
     }
     
     public void imprimir(String palabra)
     {
-      System.out.println(palabra);
+      System.out.print(palabra);
     }
     
     public boolean equals (Object obj) {
-        if (obj instanceof Persona) 
+        if (obj instanceof Azafate) 
         {
-            Persona personita = (Persona) obj;
+            Azafate personita = (Azafate) obj;
             if (super.equals(personita)) 
             {
                 return true; 
@@ -93,10 +101,10 @@ public class Azafate extends PersonalDeCabina
         }
     }
     public boolean equals (Object obj, Object obj2) {
-        if (obj instanceof Persona && obj2 instanceof Persona) 
+        if (obj instanceof Azafate && obj2 instanceof Azafate) 
         {
-            Persona personita = (Persona) obj;
-            Persona personota = (Persona) obj2;
+            Azafate personita = (Azafate) obj;
+            Azafate personota = (Azafate) obj2;
             if (personota.equals(personita)) 
             {
                 return true; 

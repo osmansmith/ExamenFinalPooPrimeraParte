@@ -9,7 +9,7 @@ package datos;
  */
 public class Pasaje
 {
-    private int numeroVuelo;
+    private int numeroVuelo = 0;
     private String fecha;
     private String hora;
     private String origen;
@@ -271,9 +271,9 @@ public class Pasaje
     }
     
     public boolean equals (Object obj) {
-        if (obj instanceof Persona) 
+        if (obj instanceof Pasaje) 
         {
-            Persona personita = (Persona) obj;
+            Pasaje personita = (Pasaje) obj;
             if (super.equals(personita)) 
             {
                 return true; 
@@ -289,10 +289,10 @@ public class Pasaje
         }
     }
     public boolean equals (Object obj, Object obj2) {
-        if (obj instanceof Persona && obj2 instanceof Persona) 
+        if (obj instanceof Pasaje && obj2 instanceof Pasaje) 
         {
-            Persona personita = (Persona) obj;
-            Persona personota = (Persona) obj2;
+            Pasaje personita = (Pasaje) obj;
+            Pasaje personota = (Pasaje) obj2;
             if (personota.equals(personita)) 
             {
                 return true; 

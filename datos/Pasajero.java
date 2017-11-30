@@ -7,7 +7,7 @@ package datos;
  * @author (Osman Ahumada) 
  * @version (1.0)
  */
-public class Pasajero extends PersonalDeCabina
+public class Pasajero extends Persona
 {
     private Pasaje pasaje;
     
@@ -41,22 +41,36 @@ public class Pasajero extends PersonalDeCabina
     
     public String toString()
     {
-     return("");
+      String msj = "\n\n***  Datos del Pasajero ***\n\n"+
+            "Rut : "+this.getRut()+
+            "\nNombre : "+this.getNombre()+
+            "\nApellido : "+this.getApellido()+
+            "\nEdad : "+this.getEdad()+
+            "\n\n*** Datos del pasaje ***\n\n"+
+            "\nNumero de Vuelo : "+this.getPasaje().getNumeroVuelo()+
+            "\nFecha : "+this.getPasaje().getFecha()+
+            "\nHora : "+this.getPasaje().getHora()+
+            "\nOrigen : "+this.getPasaje().getOrigen()+
+            "\nDestino : "+this.getPasaje().getDestino()+
+            "\nClase : "+this.getPasaje().getClase()+
+            "\nValor : "+this.getPasaje().getValor()+
+            "\n\n***************\n\n";
+         return(msj);
     }
     public String toString(String rut)
     {
      return(""+rut);
     }
     
-    public void imprimir(String palabra)
+    public void print(String palabra)
     {
-      System.out.println(palabra);
+      System.out.print(palabra);
     }
     
     public boolean equals (Object obj) {
-        if (obj instanceof Persona) 
+        if (obj instanceof Pasajero) 
         {
-            Persona personita = (Persona) obj;
+            Pasajero personita = (Pasajero) obj;
             if (super.equals(personita)) 
             {
                 return true; 
@@ -72,10 +86,10 @@ public class Pasajero extends PersonalDeCabina
         }
     }
     public boolean equals (Object obj, Object obj2) {
-        if (obj instanceof Persona && obj2 instanceof Persona) 
+        if (obj instanceof Pasajero && obj2 instanceof Pasajero) 
         {
-            Persona personita = (Persona) obj;
-            Persona personota = (Persona) obj2;
+            Pasajero personita = (Pasajero) obj;
+            Pasajero personota = (Pasajero) obj2;
             if (personota.equals(personita)) 
             {
                 return true; 
